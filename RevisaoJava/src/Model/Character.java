@@ -1,6 +1,6 @@
 package Model;
 
-public class Character 
+public abstract class Character 
 {	
 	private Integer life;
 	private Integer mana;
@@ -29,5 +29,9 @@ public class Character
 	public void setMana(Integer mana) 
 	{
 		this.mana = mana;
+	}
+
+	public void loseLife(Integer life) {
+		setLife(getLife() - life);
 	}
 }
